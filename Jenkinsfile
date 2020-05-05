@@ -14,9 +14,9 @@ pipeline {
 
                 rtServer (
 
-                    id: "ARTIFACTORY_SERVER",
+                    id: "ARTIFACTORY_SERVER1",
 
-                    url: "https://dincric.jfrog.io/artifactory",
+                    url: "https://sakthishivani.jfrog.io/artifactory",
 
                     credentialsId: 'jfrog'
                 //    username: 'admin',
@@ -30,7 +30,7 @@ pipeline {
 
                     id: "MAVEN_DEPLOYER",
 
-                    serverId: "ARTIFACTORY_SERVER",
+                    serverId: "ARTIFACTORY_SERVER1",
 
                     releaseRepo: "libs-release-local",
 
@@ -44,7 +44,7 @@ pipeline {
 
                     id: "MAVEN_RESOLVER",
 
-                    serverId: "ARTIFACTORY_SERVER",
+                    serverId: "ARTIFACTORY_SERVER1",
 
                     releaseRepo: "libs-release",
 
